@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GΞΞK CΦDΞ Truco</title>
+    <!-- Links para Fontes Externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link para a Folha de Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Conteúdo Principal que será centralizado -->
+    <div class="main-content">
+        <!-- Container do Jogo -->
+        <div class="game-container">
+            <header>
+                <!-- Título Principal com estilo Geek/Code -->
+                <h1><span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span> Truco</h1>
+            </header>
+
+            <!-- Seção Inicial: Seleção de Modo de Jogo -->
+            <div id="mode-selection">
+                <h2>Escolha o Modo:</h2>
+                <button id="btn-paulista" class="mode-button">Truco Paulista</button>
+                <button id="btn-mineiro" class="mode-button">Truco Mineiro</button>
+            </div>
+
+            <!-- Área Principal do Jogo (inicialmente oculta) -->
+            <div id="game-area" style="display: none;">
+                <!-- Placar -->
+                <div id="scoreboard">
+                    <div class="score-player">
+                        <span>Nós</span>
+                        <span id="player-score" class="score-value">0</span>
+                    </div>
+                    <div class="game-mode-display">
+                         Modo: <span id="current-mode-display">?</span> <!-- Exibe modo atual -->
+                    </div>
+                    <div class="score-opponent">
+                        <span>Eles</span>
+                        <span id="opponent-score" class="score-value">0</span>
+                    </div>
+                </div>
+
+                <!-- Área para Mensagens Especiais (Ex: Mão de Onze, Mão de Ferro) -->
+                <div id="special-message-area" class="special-message">
+                    <!-- Mensagens serão inseridas aqui pelo script -->
+                </div>
+
+                <!-- Mesa de Jogo -->
+                <div id="board">
+                    <!-- Mão do Oponente (IA) -->
+                    <div class="hand opponent-hand" id="opponent-hand">
+                        <!-- Cartas da IA (geralmente escondidas) serão inseridas aqui -->
+                    </div>
+
+                    <!-- Centro da Mesa (Vira, Cartas Jogadas, Resultado da Rodada) -->
+                    <div class="table-area" id="table-area">
+                         <div class="vira-card-container">
+                             <span>Vira:</span>
+                             <div id="vira-card" class="card-container small">
+                                 <!-- Carta Vira será inserida aqui -->
+                             </div>
+                         </div>
+                         <div class="played-cards-area">
+                             <div id="played-cards-opponent" class="card-container">
+                                <!-- Carta jogada pelo oponente -->
+                             </div>
+                             <!-- Display temporário para resultado da rodada -->
+                             <div id="round-result-display"></div>
+                             <div id="played-cards-player" class="card-container">
+                                 <!-- Carta jogada pelo jogador -->
+                             </div>
+                         </div>
+                    </div>
+
+                     <!-- Mão do Jogador -->
+                    <div class="hand player-hand" id="player-hand">
+                        <!-- Cartas do Jogador serão inseridas aqui -->
+                    </div>
+                </div>
+
+                 <!-- Controles do Jogo -->
+                <div id="game-controls">
+                     <!-- Mensagem de Status (Ex: Sua vez, Vez da IA, Truco!, etc.) -->
+                     <span id="game-status">Aguardando início...</span>
+                     <!-- Div que agrupa os botões de ação -->
+                     <div id="action-buttons">
+                        <!-- Botões de Truco (visibilidade controlada pelo script) -->
+                        <button id="btn-truco" class="control-button truco-call" style="display: none;">TRUCO!</button>
+                        <button id="btn-raise" class="control-button truco-raise" style="display: none;">Pedir ?!</button> <!-- Texto muda (6/9/12) -->
+
+                        <!-- Botões de Resposta ao Truco (visibilidade controlada pelo script) -->
+                        <button id="btn-accept-truco" class="control-button truco-accept" style="display: none;">Aceitar</button>
+                        <button id="btn-run-truco" class="control-button truco-run" style="display: none;">Correr</button>
+                        <button id="btn-raise-response" class="control-button truco-raise" style="display: none;">Aumentar!</button>
+
+                        <!-- Botões Mão de Onze (visibilidade controlada pelo script) -->
+                        <button id="btn-accept-maode11" class="control-button truco-accept" style="display: none;">Aceitar Mão de Onze (3 pts)</button>
+                        <button id="btn-run-maode11" class="control-button truco-run" style="display: none;">Correr (Dar 1 pt)</button>
+
+                        <!-- Botões Gerais de Controle do Jogo (visibilidade controlada pelo script) -->
+                        <button id="btn-new-hand" class="control-button" style="display: none;">Nova Mão</button>
+                        <button id="btn-switch-mode" class="control-button small" style="display: none;">Trocar Modo</button>
+                        <button id="btn-rules" class="control-button small" style="display: none;">📜 Regras</button>
+                    </div>
+                </div>
+            </div> <!-- Fim #game-area -->
+
+        </div> <!-- Fim .game-container -->
+    </div> <!-- Fim .main-content -->
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <a href="/../politica.html" target="_blank">Política de Privacidade</a><span>|</span>
+                <a href="/../servicos.html" target="_blank">Nossos Serviços</a><span>|</span>
+                <a href="/../sobre.html" target="_blank">Sobre Nós</a><span>|</span>
+                <a href="/../termos.html" target="_blank">Termos de Uso</a><span>|</span>
+                <a href="/../tutorial.html" target="_blank">Tutorial</a><span>|</span>
+                <a href="/../index.html" target="_blank">Início</a>
+            <a href="#" target="_blank">Desenvolvido por <span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span></a>
+        </div>
+        <p class="copyright">
+            © <span id="current-year">____</span> <span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span>. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <!-- Link para o Arquivo JavaScript (Carregado no final) -->
+    <script src="script.js"></script>
+</body>
+</html>

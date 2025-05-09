@@ -1,0 +1,164 @@
+/* --- START OF FILE regras.css --- */
+
+/* Reset Global e Fontes */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Variáveis de Cor (Dracula Theme) */
+:root {
+    --background-gradient: linear-gradient(135deg, #1a1a2e, #16213e);
+    --background-panel: rgba(40, 42, 54, 0.95);
+    --text-primary: #e0e0ff;
+    --text-secondary: #8a94c4;
+    --text-heading: #f8f8f2;
+    --accent-purple: #bd93f9;
+    --accent-green: #50fa7b;
+    --accent-pink: #ff79c6;
+    --accent-yellow: #f1fa8c;
+    --accent-orange: #ffb86c;
+    --card-border: #44475a;
+    --link-color: var(--accent-purple);
+    --link-hover-color: var(--accent-pink);
+    --toc-bg: rgba(0, 0, 0, 0.15);
+    --code-bg: rgba(0, 0, 0, 0.3);
+    --example-block-bg: rgba(255, 255, 255, 0.04); /* Fundo sutil p/ blocos de exemplo */
+    --example-block-border: var(--card-border);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-gradient);
+    color: var(--text-primary);
+    line-height: 1.7;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.rules-container {
+    background-color: var(--background-panel);
+    backdrop-filter: blur(8px);
+    padding: 35px 45px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid var(--card-border);
+    margin: 30px auto 40px auto;
+    flex-grow: 1;
+}
+
+/* Cabeçalho da Página */
+header.rules-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+header.rules-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-heading);
+    text-shadow: 0 0 8px rgba(189, 147, 249, 0.6);
+}
+
+/* Texto Geek/Code */
+.geek { color: var(--accent-green); text-shadow: 0 0 4px var(--accent-green); font-weight: bold; }
+.code { color: var(--accent-pink); text-shadow: 0 0 4px var(--accent-pink); font-weight: bold; }
+
+/* Índice Clicável */
+.toc {
+    background-color: var(--toc-bg);
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    border: 1px solid var(--card-border);
+}
+
+.toc h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-yellow);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.toc ul {
+    list-style: none; padding: 0; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px; justify-items: center;
+}
+
+.toc li { margin-bottom: 0; background-color: transparent; padding: 0; border: none; display: block; text-align: center; }
+
+.toc a {
+    color: var(--link-color); text-decoration: none; font-size: 1rem; padding: 8px 12px; border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; display: inline-block; font-weight: bold;
+}
+.toc a:hover { color: var(--link-hover-color); background-color: rgba(255, 255, 255, 0.08); transform: scale(1.05); }
+
+/* Conteúdo Principal */
+main section { margin-bottom: 3rem; }
+
+main h2 {
+    font-family: 'Orbitron', sans-serif; color: var(--accent-green); text-align: left; font-size: 1.8rem;
+    margin-top: 0; margin-bottom: 1.8rem; padding-bottom: 0.7rem; border-bottom: 2px solid var(--card-border);
+    text-shadow: 0 0 4px var(--accent-green); display: flex; align-items: center; gap: 12px;
+}
+main h2 .icon { font-size: 1.7rem; color: var(--accent-yellow); flex-shrink: 0; }
+
+main h3 {
+    font-family: 'Orbitron', sans-serif; color: var(--accent-yellow); font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1.2rem;
+    text-shadow: 0 0 3px var(--accent-yellow); display: flex; align-items: center; gap: 10px;
+}
+main h3 .icon { font-size: 1.3rem; color: var(--accent-pink); flex-shrink: 0; }
+
+p, main ul { margin-bottom: 1rem; color: var(--text-secondary); font-size: 1rem; }
+main ul { list-style: none; padding-left: 10px; }
+
+main li {
+    background-color: rgba(0, 0, 0, 0.1); padding: 12px 18px; margin-bottom: 10px; border-radius: 6px;
+    border-left: 4px solid var(--accent-green); display: flex; align-items: flex-start; gap: 12px; color: var(--text-primary);
+}
+main li .icon { font-size: 1.2rem; color: var(--accent-green); flex-shrink: 0; margin-top: 2px; }
+#dicas li { border-left-color: var(--accent-yellow); } #dicas li .icon { color: var(--accent-yellow); }
+
+/* Destaques e Código */
+strong { color: var(--accent-yellow); font-weight: 700; }
+code, .card-example { background-color: var(--code-bg); padding: 3px 7px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-size: 0.95em; color: var(--accent-pink); border: 1px solid var(--card-border); white-space: nowrap; /* Evitar quebra de linha em cartas */ }
+
+/* Bloco de Exemplo (Substituto da Ilustração) */
+.example-block {
+    background: var(--example-block-bg); border: 1px dashed var(--example-block-border); border-radius: 8px; padding: 20px;
+    margin: 1.5rem 0; /* Sem margem auto, alinha com texto */ text-align: left; color: var(--text-primary);
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+}
+.example-block .icon {
+    font-size: 1.5rem; color: var(--accent-purple); margin-right: 10px; display: inline-block; vertical-align: middle;
+}
+.example-block p { margin-bottom: 0.5rem; color: var(--text-primary); font-size: 0.95rem; }
+.example-block p:last-child { margin-bottom: 0; }
+
+/* Botão Voltar */
+.back-button-container { text-align: center; margin-top: 3.5rem; }
+.back-button {
+    display: inline-block; background-color: var(--card-border); color: var(--card-background); border: none; padding: 14px 30px;
+    border-radius: 8px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); text-transform: uppercase; letter-spacing: 1px; text-decoration: none;
+}
+.back-button:hover { transform: translateY(-3px) scale(1.02); background-color: var(--text-secondary); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); }
+
+/* Rodapé */
+footer { background-color: var(--background-panel); color: var(--text-secondary); text-align: center; padding: 20px 10px; flex-shrink: 0; font-size: 0.9rem; border-top: 1px solid var(--card-border); width: 100%; }
+footer .footer-links a { color: var(--accent-purple); text-decoration: none; margin: 0 8px; transition: color 0.2s ease; }
+footer .footer-links a:hover { color: var(--accent-pink); } footer .footer-links span { color: var(--card-border); margin: 0 3px; } footer .copyright { margin-top: 10px; font-size: 0.8rem; }
+
+/* Responsividade */
+@media (max-width: 920px) { .rules-container { padding: 30px 35px; max-width: 95%; } }
+@media (max-width: 768px) { .rules-container { padding: 25px 25px; } header.rules-header h1 { font-size: 2.2rem; } .toc h2 { font-size: 1.4rem; } main h2 { font-size: 1.6rem; } main h3 { font-size: 1.2rem; } main li { padding: 10px 15px; } }
+@media (max-width: 480px) { body { padding: 15px 10px; } .rules-container { padding: 20px 15px; margin-top: 15px; } header.rules-header h1 { font-size: 1.8rem; } .toc { padding: 15px; } .toc h2 { font-size: 1.3rem; } .toc ul { grid-template-columns: 1fr; gap: 8px;} .toc a { font-size: 0.95rem; } main h2 { font-size: 1.4rem; } main h3 { font-size: 1.1rem; } p, main ul, main li { font-size: 0.9rem; } .example-block { padding: 15px; } .back-button { padding: 12px 25px; font-size: 1rem; } footer { padding: 15px 5px; font-size: 0.8rem; } }
+/* --- END OF FILE regras.css --- */

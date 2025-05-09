@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo - GΞΞK CΦDΞ Truco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="regras.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+    <div class="rules-container">
+        <header class="rules-header">
+            <h1><span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span> Truco</h1>
+        </header>
+
+        <nav class="toc">
+            <h2>Índice Rápido 🧭</h2>
+            <ul>
+                <li><a href="#objetivo">🏆 Objetivo</a></li>
+                <li><a href="#baralho">🃏 Baralho</a></li>
+                <li><a href="#manilhas">✨ Manilhas</a></li>
+                <li><a href="#rodadas">♻️ Rodadas</a></li>
+                <li><a href="#truco">🗣️ O Truco</a></li>
+                <li><a href="#pontuacao">💯 Pontuação</a></li>
+                <li><a href="#paulista">🇵 Truco Paulista</a></li>
+                <li><a href="#mineiro">🇲 Truco Mineiro</a></li>
+                <li><a href="#mao11">😬 Mão de 11/Ferro</a></li>
+                <li><a href="#dicas">💡 Dicas Estratégicas</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="objetivo">
+                <h2><span class="icon">🏆</span>Objetivo do Jogo</h2>
+                <p>O objetivo principal no Truco é ser a primeira dupla a atingir <strong>12 pontos</strong>. Esses pontos são disputados em "mãos", e cada mão é decidida em até três "rodadas". Estratégia, blefe e um pouco de sorte são essenciais!</p>
+            </section>
+
+            <section id="baralho">
+                <h2><span class="icon">🃏</span>O Baralho</h2>
+                <p>Esqueça o baralho completo! No Truco, usamos apenas <strong>40 cartas</strong>, retirando os 8s, 9s, 10s e Curingas. As cartas que valem são:</p>
+                <ul>
+                    <li><span class="icon">🔢</span> Valores: <code class="card-example">A</code>, <code class="card-example">2</code>, <code class="card-example">3</code>, <code class="card-example">4</code>, <code class="card-example">5</code>, <code class="card-example">6</code>, <code class="card-example">7</code>, <code class="card-example">Q</code> (Dama), <code class="card-example">J</code> (Valete), <code class="card-example">K</code> (Rei)</li>
+                    <li><span class="icon">🎨</span> Naipes: Ouros<span style="color: var(--accent-red);">♦</span>, Espadas<span style="color: var(--card-text);">♠</span>, Copas<span style="color: var(--accent-red);">♥</span> e Paus<span style="color: var(--card-text);">♣</span>.</li>
+                </ul>
+            </section>
+
+            <section id="manilhas">
+                <h2><span class="icon">✨</span>Vira e Manilhas</h2>
+                <p>A cada mão, uma carta é virada na mesa: a <strong>Vira</strong>. Ela não joga, mas define as <strong>Manilhas</strong>, as cartas mais poderosas daquela mão. O jeito de definir as manilhas muda completamente entre os modos:</p>
+                <div class="example-block">
+                    <span class="icon">🤔</span>
+                    <p><strong>Conceito Chave:</strong> A Manilha é (geralmente) a carta "seguinte" à Vira na hierarquia do Truco. O que muda é *quais* cartas se tornam manilha e a ordem de força entre elas.</p>
+                </div>
+                <ul>
+                    <li><span class="icon">🇵</span><strong>Paulista:</strong> Manilhas dependem da Vira. <a href="#paulista">Veja detalhes...</a></li>
+                    <li><span class="icon">🇲</span><strong>Mineiro:</strong> Manilhas são <strong>sempre as mesmas 4</strong>. <a href="#mineiro">Veja detalhes...</a></li>
+                </ul>
+            </section>
+
+            <section id="rodadas">
+                 <h2><span class="icon">♻️</span>As Rodadas (Quedas)</h2>
+                 <p>Cada mão é um "melhor de três". Jogadores jogam uma carta por rodada. Quem tiver a carta mais forte ganha a rodada. Ganha a mão quem vencer 2 rodadas.</p>
+                 <ul>
+                     <li><span class="icon">🥇</span><strong>Vitória na Rodada:</strong> A carta de maior valor vence. Manilhas são as mais fortes, seguidas pela ordem das cartas comuns (que varia entre Paulista e Mineiro).</li>
+                     <li><span class="icon">🤝</span><strong>Empate Comum:</strong> Se cartas de mesmo valor (e não manilhas) são jogadas, a rodada empata ("canga" ou "embucha"). Ninguém vence a queda.</li>
+                     <li><span class="icon">⚜️</span><strong>Empate de Manilhas (Só Paulista):</strong> Se manilhas de mesmo valor são jogadas, quem jogou por <strong>último</strong> ganha a rodada.</li>
+                      <li><span class="icon">✋</span><strong>Vencer a Mão:</strong> Basta ganhar 2 rodadas. Ex: Ganhou R1, Ganhou R2 -> Mão vencida! Não joga R3.</li>
+                      <li><span class="icon">⚖️</span><strong>Desempate da Mão:</strong> Regra essencial!
+                         <ul>
+                            <li>Empatou R1? Quem vencer R2 leva a mão.</li>
+                            <li>Venceu R1 e empatou R2? Você já ganhou a mão!</li>
+                            <li>Empatou R1 e R2? Quem vencer R3 leva tudo.</li>
+                             <li>Ganhou R1, perdeu R2? Quem vencer R3 leva a mão (melhor de 3).</li>
+                            <li>Todas empataram? Ninguém pontua!</li>
+                         </ul>
+                     </li>
+                 </ul>
+                 <div class="example-block">
+                     <span class="icon">💡</span>
+                     <p><strong>Exemplo de Desempate:</strong> Você ganha R1. A R2 empata. <strong>Resultado:</strong> Você ganhou a mão, pois já tinha uma vitória e o empate na R2 confirma!</p>
+                 </div>
+             </section>
+
+            <section id="truco">
+                 <h2><span class="icon">🗣️</span>Pedindo TRUCO! (A Escada da Aposta)</h2>
+                 <p>É aqui que o jogo pega fogo! Antes de jogar sua carta, você pode desafiar, aumentando os pontos em jogo.</p>
+                 <ol style="list-style:none; padding-left:0;">
+                     <li style="border-color: var(--accent-red);">
+                        <span class="icon" style="color: var(--accent-red);">1️⃣</span>
+                        <div><strong>TRUCO!</strong> Proposta inicial para valer <strong>3 pontos</strong>.<br>Resposta: Correr (oponente ganha 1), Aceitar (vale 3), Aumentar (pedir Seis).</div>
+                     </li>
+                     <li style="border-color: var(--accent-orange);">
+                        <span class="icon" style="color: var(--accent-orange);">2️⃣</span>
+                        <div><strong>SEIS!</strong> (ou Meio Pau) Aumenta para <strong>6 pontos</strong>.<br>Resposta: Correr (oponente ganha 3), Aceitar (vale 6), Aumentar (pedir Nove).</div>
+                    </li>
+                    <li style="border-color: var(--accent-yellow);">
+                        <span class="icon" style="color: var(--accent-yellow);">3️⃣</span>
+                        <div><strong>NOVE!</strong> Aumenta para <strong>9 pontos</strong>.<br>Resposta: Correr (oponente ganha 6), Aceitar (vale 9), Aumentar (pedir Doze).</div>
+                    </li>
+                    <li style="border-color: var(--accent-green);">
+                        <span class="icon" style="color: var(--accent-green);">4️⃣</span>
+                        <div><strong>DOZE!</strong> (ou Queda/Jogo) Aposta máxima, valendo <strong>12 pontos</strong>!<br>Resposta: Correr (oponente ganha 9), Aceitar (vale 12). Não pode aumentar mais.</div>
+                    </li>
+                 </ol>
+                 <p><strong>Importante:</strong> A decisão de correr/aceitar/aumentar é sempre da dupla que *recebeu* o pedido.</p>
+             </section>
+
+            <section id="pontuacao">
+                 <h2><span class="icon">💯</span>Resumo da Pontuação</h2>
+                 <p>Veja quanto vale cada situação no final da mão:</p>
+                 <ul>
+                     <li><span class="icon">🔹</span>Mão normal: <strong>1 pt</strong></li>
+                     <li><span class="icon">✅</span>Truco Aceito: <strong>3 pts</strong> / <span class="icon">🏃</span>Corre do Truco: <strong>1 pt</strong></li>
+                     <li><span class="icon">✅</span>Seis Aceito: <strong>6 pts</strong> / <span class="icon">🏃</span>Corre do Seis: <strong>3 pts</strong></li>
+                     <li><span class="icon">✅</span>Nove Aceito: <strong>9 pts</strong> / <span class="icon">🏃</span>Corre do Nove: <strong>6 pts</strong></li>
+                     <li><span class="icon">✅</span>Doze Aceito: <strong>12 pts</strong> / <span class="icon">🏃</span>Corre do Doze: <strong>9 pts</strong></li>
+                     <li><span class="icon">😬</span>Mão de Onze Aceita ou Mão de Ferro: <strong>3 pts</strong></li>
+                     <li><span class="icon">😬</span>Corre da Mão de Onze: <strong>1 pt</strong> (para o adversário)</li>
+                     <li><span class="icon">🚫</span>Mão totalmente empatada: <strong>0 pts</strong></li>
+                 </ul>
+            </section>
+
+            <section id="paulista">
+                 <h2><span class="icon">🇵</span>Truco Paulista Detalhado</h2>
+                <h3>Manilhas "Móveis"</h3>
+                 <p>Lembre-se: a Vira define o *valor* da manilha (próximo na sequência 4-5-6-7-Q-J-K-A-2-3-4...). Todos os 4 naipes dessa carta viram manilhas.</p>
+                 <div class="example-block">
+                     <span class="icon">🔄</span>
+                     <p><strong>Exemplo Concreto:</strong></p>
+                      <p>Se a <strong>Vira</strong> for <code class="card-example">A♣</code> (Ás de Paus)...</p>
+                      <p>As <strong>Manilhas</strong> são todas as cartas <code class="card-example">2</code>.</p>
+                      <p>A ordem de força entre elas será: <code class="card-example">2♦</code> > <code class="card-example">2♠</code> > <code class="card-example">2♥</code> > <code class="card-example">2♣</code>.</p>
+                 </div>
+                <h3>Ordem das Cartas Comuns</h3>
+                 <p>Excluindo as manilhas da mão atual, a força das demais cartas é fixa:</p>
+                 <p style="font-weight:bold; color:var(--text-primary); text-align: center; font-size: 1.1em;">
+                    <code class="card-example">3</code> > <code class="card-example">2</code> > <code class="card-example">A</code> > <code class="card-example">K</code> > <code class="card-example">J</code> > <code class="card-example">Q</code> > <code class="card-example">7</code> > <code class="card-example">6</code> > <code class="card-example">5</code> > <code class="card-example">4</code>
+                </p>
+            </section>
+
+            <section id="mineiro">
+                <h2><span class="icon">🇲</span>Truco Mineiro Detalhado</h2>
+                <h3>Manilhas Fixas (As "Figuras")</h3>
+                 <p>No Mineiro, esqueça a Vira para definir manilhas. Elas são <strong>sempre</strong> estas quatro cartas, com nomes e força próprios:</p>
+                 <ol style="list-style: none; padding-left:0;">
+                     <li style="border-color: var(--accent-purple); background: rgba(189, 147, 249, 0.1);">
+                        <strong style="font-size:1.3em; color: var(--accent-purple)">1º</strong> <code class="card-example">4♣</code> <strong>Zap</strong> (Paus): A carta mais invencível do jogo!
+                    </li>
+                    <li style="border-color: var(--accent-pink); background: rgba(255, 121, 198, 0.1);">
+                        <strong style="font-size:1.2em; color: var(--accent-pink)">2º</strong> <code class="card-example">7♥</code> <strong>Copas</strong> (Sete de Copas): Forte, mas perde pro Zap.
+                    </li>
+                    <li style="border-color: var(--accent-green); background: rgba(80, 250, 123, 0.1);">
+                        <strong style="font-size:1.1em; color: var(--accent-green)">3º</strong> <code class="card-example">A♠</code> <strong>Espadilha</strong> (Ás de Espadas): Respeitável, ganha do Pica-fumo.
+                    </li>
+                    <li style="border-color: var(--accent-yellow); background: rgba(241, 250, 140, 0.1);">
+                        <strong style="font-size:1.0em; color: var(--accent-yellow)">4º</strong> <code class="card-example">7♦</code> <strong>Pica-fumo</strong> (Sete de Ouros): A mais "fraca" das manilhas, mas ainda ganha de todas as outras cartas comuns.
+                    </li>
+                 </ol>
+                 <h3>Ordem das Cartas Comuns ("Brancas")</h3>
+                  <p>Tirando as 4 Manilhas Fixas, a força das demais é:</p>
+                  <p style="font-weight:bold; color:var(--text-primary); text-align: center; font-size: 1.1em;">
+                    <code class="card-example">3</code> > <code class="card-example">2</code> > <code class="card-example">A(♦♥♣)</code> > <code class="card-example">K</code> > <code class="card-example">J</code> > <code class="card-example">Q</code> > <code class="card-example">7(♠♣)</code> > <code class="card-example">6</code> > <code class="card-example">5</code> > <code class="card-example">4(♦♥♠)</code>
+                 </p>
+                  <p><strong>Atenção:</strong> Os <code class="card-example">Ases</code> e <code class="card-example">Setes</code> que não são manilhas fixas entram na ordem comum.</p>
+            </section>
+
+            <section id="mao11">
+                <h2><span class="icon">😬</span>Mão de Onze e Mão de Ferro</h2>
+                <div class="example-block">
+                    <span class="icon">⚠️</span>
+                    <p><strong>Cenário: Mão de Onze (Placar 11 a 9 para você)</strong></p>
+                    <p>1. Você recebe suas 3 cartas. A IA ainda não.</p>
+                    <p>2. Você olha sua mão (Ex: <code class="card-example">K♥</code>, <code class="card-example">2♦</code>, <code class="card-example">5♠</code>). </p>
+                    <p>3. Você decide: <strong>Jogar</strong> (valerá 3 pontos, sem truco do adversário) ou <strong>Correr</strong> (IA ganha 1 ponto agora mesmo).</p>
+                </div>
+                <div class="example-block">
+                    <span class="icon">⚔️</span>
+                    <p><strong>Cenário: Mão de Ferro (Placar 11 a 11)</strong></p>
+                    <p>1. As cartas são distribuídas para ambos.</p>
+                    <p>2. <strong>Ninguém vê nada!</strong> As cartas ficam viradas para baixo.</p>
+                    <p>3. Joga-se a primeira rodada às escuras, depois a segunda, etc.</p>
+                    <p>4. Quem vencer 2 rodadas ganha <strong>3 pontos</strong> (e o jogo!).</p>
+                    <p>5. Não há pedido de Truco.</p>
+                </div>
+            </section>
+
+            <section id="dicas">
+                 <h2><span class="icon">💡</span>Dicas e Estratégias Rápidas</h2>
+                 <ul id="dicas">
+                    <li><span class="icon">📊</span><strong>Avalie sua Mão:</strong> Manilhas? Cartas altas (3, 2, A)? Mãos só com 4, 5, 6, 7 comuns são geralmente fracas.</li>
+                    <li><span class="icon">🥇</span><strong>A Primeira é Ouro:</strong> Ganhar a 1ª rodada te dá controle. Use uma carta boa se necessário, mas não sua melhor (a menos que precise muito).</li>
+                     <li><span class="icon">🎣</span><strong>"Queimar" ou "Pescar":</strong> Jogar uma carta média (Q, J, K) na primeira pode fazer o oponente gastar uma carta mais forte ou revelar a força da mão dele.</li>
+                    <li><span class="icon">🗣️</span><strong>Quando Trucar?</strong> Com manilha(s); com duas cartas altas (ex: 2 e 3); para pressionar quando o adversário está perto dos 11; como blefe CUIDADOSO. Geralmente, truque cedo (R1 ou início da R2).</li>
+                    <li><span class="icon">🛡️</span><strong>Responder ao Truco:</strong> Tem manilha? Aceite! Mão muito ruim? Considere correr, especialmente se o oponente ganharia o jogo com os pontos do truco. Precisa arriscar (placar atrás)? Talvez aceite. Só peça SEIS+ se tiver mão quase garantida!</li>
+                    <li><span class="icon">🧠</span><strong>Memória:</strong> Tente lembrar as cartas altas (A, 2, 3, K...) e as manilhas que já foram jogadas. Isso ajuda a saber o que pode estar na mão do adversário nas rodadas finais.</li>
+                    <li><span class="icon">😬</span><strong>Na Mão de Onze (Sua):</strong> Quase sempre vale a pena Jogar. Só corra se sua mão for um desastre total (Ex: 4, 5, 6 e sem a menor chance).</li>
+                 </ul>
+                <div class="example-block">
+                    <span class="icon">✨</span>
+                     <p><strong>Exemplo de Mão Boa (Mineiro):</strong> <code class="card-example">7♥</code> (Copas), <code class="card-example">3♦</code>, <code class="card-example">K♠</code>. -> Manilha forte + carta mais alta das comuns. Dá pra pensar em trucar!</p>
+                     <p><strong>Exemplo de Mão Ruim (Paulista, Vira=K):</strong> <code class="card-example">4♦</code>, <code class="card-example">5♣</code>, <code class="card-example">Q♥</code> (Manilhas são os Ases). -> Se o oponente trucar, provavelmente é melhor correr.</p>
+                </div>
+            </section>
+
+            <div class="back-button-container">
+                <a href="index.html" class="back-button">← Voltar ao Jogo</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/../politica.html" target="_blank">Política de Privacidade</a><span>|</span>
+                <a href="/../servicos.html" target="_blank">Nossos Serviços</a><span>|</span>
+                <a href="/../sobre.html" target="_blank">Sobre Nós</a><span>|</span>
+                <a href="/../termos.html" target="_blank">Termos de Uso</a><span>|</span>
+                <a href="/../tutorial.html" target="_blank">Tutorial</a><span>|</span>
+                <a href="/../index.html" target="_blank">Início</a>
+            <a href="#" target="_blank">Desenvolvido por <span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span></a>
+        </div>
+        <p class="copyright">
+            © <span id="current-year">____</span> <span class="geek">GΞΞK</span><span class="code"> CΦDΞ</span>. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
